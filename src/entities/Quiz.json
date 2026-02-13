@@ -1,0 +1,59 @@
+{
+  "name": "Quiz",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the quiz"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of what the quiz covers"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "politics",
+        "finance"
+      ],
+      "description": "Category of the quiz"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Difficulty level"
+    },
+    "questions": {
+      "type": "array",
+      "description": "Array of quiz questions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "correct_answer": {
+            "type": "string"
+          },
+          "explanation": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}

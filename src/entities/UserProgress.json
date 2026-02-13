@@ -1,0 +1,35 @@
+{
+  "name": "UserProgress",
+  "type": "object",
+  "properties": {
+    "quiz_id": {
+      "type": "string",
+      "description": "ID of the quiz taken"
+    },
+    "quiz_title": {
+      "type": "string",
+      "description": "Title of the quiz"
+    },
+    "score": {
+      "type": "number",
+      "description": "Score achieved (0-100)"
+    },
+    "total_questions": {
+      "type": "number",
+      "description": "Total number of questions"
+    },
+    "correct_answers": {
+      "type": "number",
+      "description": "Number of correct answers"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the quiz was completed"
+    }
+  },
+  "required": [
+    "quiz_id",
+    "score"
+  ]
+}

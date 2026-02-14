@@ -20,7 +20,7 @@ zip -r "${ZIP_NAME}" . \
   -x "node_modules/*" \
   -x "dist/*" \
   -x "*.zip" \
-  -x "back-to-basicsorg-3eef3fda (Unzipped Files)/*" \
+  -x "*back-to-basicsorg-3eef3fda*" \
   -x "create-zip.sh"
 
 echo "Zip file created successfully: ${ZIP_NAME}"
